@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="Memorry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIL-Gu-Fih">
+                                <rect key="frame" x="158" y="133" width="59" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAE-px-sD4">
+                                <rect key="frame" x="59" y="309.5" width="257.5" height="48.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Open Second VC">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="adp-EO-YAw" kind="show" id="ovI-Dk-AdE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.81960785390000002" green="0.94509804249999996" blue="0.74117654560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="hAE-px-sD4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8VM-xF-l1v"/>
+                            <constraint firstItem="gIL-Gu-Fih" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="133" id="W38-c5-sWB"/>
+                            <constraint firstItem="hAE-px-sD4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hw0-H9-8si"/>
+                            <constraint firstItem="gIL-Gu-Fih" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qHz-yx-eNf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="gIL-Gu-Fih" id="Qtp-4X-qku"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="64"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="ukO-70-enS">
+            <objects>
+                <viewController id="adp-EO-YAw" customClass="SecondViewController" customModule="Memorry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jOQ-ts-BPx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2g-68-INy">
+                                <rect key="frame" x="112" y="299.5" width="151" height="48.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close VC">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeVC:" destination="adp-EO-YAw" eventType="touchUpInside" id="aCP-8w-0fL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JPQ-Bi-cCH"/>
+                        <color key="backgroundColor" red="0.96841138601303101" green="0.91815088800381106" blue="0.43968095101955446" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="M2g-68-INy" firstAttribute="centerX" secondItem="jOQ-ts-BPx" secondAttribute="centerX" id="BTB-qH-VL5"/>
+                            <constraint firstItem="M2g-68-INy" firstAttribute="centerY" secondItem="jOQ-ts-BPx" secondAttribute="centerY" id="Snb-jh-xra"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="60r-JI-MT5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nJt-Lc-Bjt" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="64"/>
+        </scene>
+    </scenes>
+</document>
