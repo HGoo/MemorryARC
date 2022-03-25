@@ -14,14 +14,34 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      //  label.isHidden = true
+        label.isHidden = true
         
-        let person = "Nik"
-        let age = 27
+       
+        var alexey: Person?
+        var swiftBook: Job?
         
-        label.text = "Name: \(person), age: \(age)"
+        alexey?.job = swiftBook
+        swiftBook?.person = alexey
+        
+        alexey = nil
+        swiftBook = nil
     }
 
 
 }
 
+class Person {
+    var job: Job?
+    
+    deinit {
+        print("person 1111")
+    }
+}
+
+class Job {
+    var person: Person?
+
+    deinit {
+        print("person 1111")
+    }
+}
