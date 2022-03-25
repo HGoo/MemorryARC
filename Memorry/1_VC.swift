@@ -26,8 +26,8 @@ class FirstViewController: UIViewController {
         alexey?.job = swiftBook
         swiftBook?.person = alexey
         
-        swiftBook = nil
         alexey = nil
+        swiftBook = nil
     }
 
 
@@ -35,16 +35,8 @@ class FirstViewController: UIViewController {
 
 class Person {
     var job: Job?
-    
-    deinit {
-        print("person 1111")
-    }
 }
 
 class Job {
     weak var person: Person?
-
-    deinit {
-        print("job 1111")
-    }
 }
